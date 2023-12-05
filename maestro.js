@@ -141,7 +141,7 @@ export default class Conductor {
      * Update Combat Hook
      */
     static _hookOnUpdateCombat() {
-        Hooks.on("combatStart", (combat, update, options, userId) => {
+        Hooks.on("updateCombat", (combat, update, options, userId) => {
             HypeTrack._onUpdateCombat(combat, update, options, userId);
             CombatTrack._onUpdateCombat(combat, update, options, userId);
         });
